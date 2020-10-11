@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-size: 10px;
+  font-family: Arial;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  background-color: #000;
+  width: 100%;
+}
+header .wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+header .logo {
+  width: 184px;
+  text-align: center;
+}
+header .logo__title {
+  font-weight: normal;
+  font-family: Georgia;
+  color: #F1CDB3;
+  line-height: 110%;
+  letter-spacing: 0.06rem;
+  font-size: 3.2rem;
+}
+header .logo__subtitle {
+  color: #FFFFFF;
+  font-size: 1.3rem;
+  line-height: 110%;
+}
+header .list {
+  display: flex;
+  list-style: none;
+}
+header .list .list__item {
+  padding: 0 17px;
+}
+header .list .list__item .list__link {
+  color: #CDCDCD;
+  font-size: 1.5rem;
+  line-height: 160%;
+  text-decoration: none;
+}
+header .list .list__item .list__link_active {
+  color: #FAFAFA;
+  border-bottom: 3px solid #F1CDB3;
+}
+
+.hero {
+  display: flex;
+}
+.hero .hero__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.hero .hero__content .hero__title {
+  color: #FFFFFF;
+  line-height: 130%;
+  font-family: Georgia;
+  font-weight: normal;
+  font-size: 4.4rem;
+}
+.hero .hero__content .hero__subtitle {
+  line-height: 160%;
+  font-size: 1.5rem;
+  color: #CDCDCD;
+}
+
+/*# sourceMappingURL=main.css.map */
