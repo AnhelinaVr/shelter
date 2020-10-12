@@ -224,8 +224,13 @@ header .list__link_active {
   width: 100%;
 }
 .pets__card {
-  background: #FAFAFA;
+  border-radius: 9px;
   padding-bottom: 28px;
+  background: #FAFAFA;
+}
+.pets__card:hover {
+  background: #FFFFFF;
+  cursor: pointer;
 }
 .pets__card_title {
   padding-top: 27px;
@@ -297,7 +302,7 @@ header .list__link_active {
   background: #F6F6F6;
 }
 .donation .wrapper {
-  padding: 81px 0 101px;
+  padding: 81px 0 100px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -341,9 +346,13 @@ header .list__link_active {
   display: flex;
   margin: 20px 0;
   max-width: 350px;
-  padding: 10px 15px;
+  padding: 10.5px 15px;
   border-radius: 9px;
   background: #F1CDB3;
+}
+.donation .credit-card__number {
+  text-decoration: none;
+  color: #545454;
   font-family: Georgia;
   font-style: normal;
   font-weight: normal;

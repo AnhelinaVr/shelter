@@ -292,8 +292,13 @@ header {
         width: 100%;
     }
     &__card {
-        background: $color-light-s;
+        border-radius: 9px;
         padding-bottom: 28px;
+        background: $color-light-s;
+        &:hover {
+            background: $color-light-xl;
+            cursor: pointer;
+        }
     }
     &__card_title {
         padding-top: 27px;
@@ -352,7 +357,7 @@ header {
 .donation {
     background: $color-light-l;
     .wrapper {
-        padding: 81px 0 101px;
+        padding: 81px 0 100px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -383,10 +388,14 @@ header {
         display: flex;
         margin: 20px 0;
         max-width: 350px;
-        padding: 10px 15px;
+        padding: 10.5px 15px;
         border-radius: 9px;
         background: $color-primary;
-        @include h4;
+        &__number {
+            text-decoration: none;
+            color: $color-dark-l;
+            @include h4;
+        }
         img {
             margin-right: 3px;
         }
