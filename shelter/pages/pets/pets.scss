@@ -9,7 +9,7 @@
     font-family: Arial;
 }
 
-$footer-gradient-background :url('/assets/images/noise_transparent@2x.png'),
+$footer-gradient-background :url('../../assets/images/noise_transparent@2x.png'),
 radial-gradient(110.67% 538.64% at 5.73% 50%,
 #513D2F 0%,
 #1A1A1C 100%),
@@ -104,64 +104,64 @@ $color-dark-3xl: #292929;
     }
     &__arrow {
         &_left {
-            background-image: url('/assets/icons/arrow-left.svg');
+            background-image: url('../../assets/icons/arrow-left.svg');
             background-repeat: no-repeat;
             background-position: 50% 50%;
             &_inactive {
-                background-image: url('/assets/icons/arrow-inactive.svg');
+                background-image: url('../../assets/icons/arrow-inactive.svg');
                 background-repeat: no-repeat;
                 background-position: 50% 50%;
             }
         }
         &_right {
-            background-image: url('/assets/icons/arrow-right.svg');
+            background-image: url('../../assets/icons/arrow-right.svg');
             background-repeat: no-repeat;
             background-position: 50% 50%;
             &_inactive {
-                background-image: url('/assets/icons/arrow-inactive.svg');
+                background-image: url('../../assets/icons/arrow-inactive.svg');
                 background-repeat: no-repeat;
                 background-position: 50% 50%;
                 transform: rotate(180deg);
             }
         }
         &_small_left {
-            background-image: url('/assets/icons/small-arrow.svg');
+            background-image: url('../../assets/icons/small-arrow.svg');
             background-repeat: no-repeat;
             background-position: 50% 50%;
             transform: rotate(180deg);
             &_inactive {
-                background-image: url('/assets/icons/small-arrow_inactive.svg');
+                background-image: url('../../assets/icons/small-arrow_inactive.svg');
                 background-repeat: no-repeat;
                 background-position: 50% 50%;
             }
             &_double {
-                background-image: url('/assets/icons/small-arrow-double.svg');
+                background-image: url('../../assets/icons/small-arrow-double.svg');
                 background-repeat: no-repeat;
                 background-position: 50% 50%;
                 transform: rotate(180deg);
                 &_inactive {
-                    background-image: url('/assets/icons/small-arrow__inactive-double.svg');
+                    background-image: url('../../assets/icons/small-arrow__inactive-double.svg');
                     background-repeat: no-repeat;
                     background-position: 50% 50%;
                 }
             }
         }
         &_small_right {
-            background-image: url('/assets/icons/small-arrow.svg');
+            background-image: url('../../assets/icons/small-arrow.svg');
             background-repeat: no-repeat;
             background-position: 50% 50%;
             &_inactive {
-                background-image: url('/assets/icons/small-arrow_inactive.svg');
+                background-image: url('../../assets/icons/small-arrow_inactive.svg');
                 background-repeat: no-repeat;
                 background-position: 50% 50%;
                 transform: rotate(180deg);
             }
             &_double {
-                background-image: url('/assets/icons/small-arrow-double.svg');
+                background-image: url('../../assets/icons/small-arrow-double.svg');
                 background-repeat: no-repeat;
                 background-position: 50% 50%;
                 &_inactive {
-                    background-image: url('/assets/icons/small-arrow__inactive-double.svg');
+                    background-image: url('../../assets/icons/small-arrow__inactive-double.svg');
                     background-repeat: no-repeat;
                     background-position: 50% 50%;
                     transform: rotate(180deg);

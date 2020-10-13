@@ -51,66 +51,66 @@
   background-color: transparent;
 }
 .button__arrow_left {
-  background-image: url("/assets/icons/arrow-left.svg");
+  background-image: url("../../assets/icons/arrow-left.svg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
 .button__arrow_left_inactive {
-  background-image: url("/assets/icons/arrow-inactive.svg");
+  background-image: url("../../assets/icons/arrow-inactive.svg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
 .button__arrow_right {
-  background-image: url("/assets/icons/arrow-right.svg");
+  background-image: url("../../assets/icons/arrow-right.svg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
 .button__arrow_right_inactive {
-  background-image: url("/assets/icons/arrow-inactive.svg");
+  background-image: url("../../assets/icons/arrow-inactive.svg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
   transform: rotate(180deg);
 }
 .button__arrow_small_left {
-  background-image: url("/assets/icons/small-arrow.svg");
+  background-image: url("../../assets/icons/small-arrow.svg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
   transform: rotate(180deg);
 }
 .button__arrow_small_left_inactive {
-  background-image: url("/assets/icons/small-arrow_inactive.svg");
+  background-image: url("../../assets/icons/small-arrow_inactive.svg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
 .button__arrow_small_left_double {
-  background-image: url("/assets/icons/small-arrow-double.svg");
+  background-image: url("../../assets/icons/small-arrow-double.svg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
   transform: rotate(180deg);
 }
 .button__arrow_small_left_double_inactive {
-  background-image: url("/assets/icons/small-arrow__inactive-double.svg");
+  background-image: url("../../assets/icons/small-arrow__inactive-double.svg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
 .button__arrow_small_right {
-  background-image: url("/assets/icons/small-arrow.svg");
+  background-image: url("../../assets/icons/small-arrow.svg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
 .button__arrow_small_right_inactive {
-  background-image: url("/assets/icons/small-arrow_inactive.svg");
+  background-image: url("../../assets/icons/small-arrow_inactive.svg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
   transform: rotate(180deg);
 }
 .button__arrow_small_right_double {
-  background-image: url("/assets/icons/small-arrow-double.svg");
+  background-image: url("../../assets/icons/small-arrow-double.svg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
 .button__arrow_small_right_double_inactive {
-  background-image: url("/assets/icons/small-arrow__inactive-double.svg");
+  background-image: url("../../assets/icons/small-arrow__inactive-double.svg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
   transform: rotate(180deg);
@@ -194,7 +194,7 @@ header .list__link_active {
 }
 
 .hero-bg {
-  background: url("/assets/images/noise_transparent@2x.png"), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
+  background: url("../../assets/images/noise_transparent@2x.png"), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
 }
 
 .hero {
@@ -428,7 +428,7 @@ header .list__link_active {
 }
 
 .footer {
-  background: url("/assets/images/noise_transparent@2x.png"), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
+  background: url("../../assets/images/noise_transparent@2x.png"), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
 }
 .footer .wrapper {
   padding-top: 40px;
@@ -747,6 +747,7 @@ header .menu__btn > span::after {
   }
   .pets__cards-container {
     justify-content: center;
+    margin: 0 55px;
   }
   .pets__card:not(:first-child) {
     display: none;
