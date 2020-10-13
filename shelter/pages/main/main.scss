@@ -680,7 +680,7 @@ header {
             padding: 100px 0;
             list-style: none;
             text-align: center;
-            background-color: $color-light-l;
+            background-color: $color-light-s;
             box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
         }
         /* элементы меню */
@@ -688,11 +688,11 @@ header {
             display: block;
             padding: 12px 24px;
             text-decoration: none;
-            color: $color-dark-l;
+            color: $color-dark-xl;
             @include h4;
         }
         .menu__item:hover {
-            background-color: #cfd8dc;
+            background-color: $color-dark-s;
         }
         #menu__toggle:checked~.menu__btn>span {
             transform: rotate(45deg);
@@ -723,7 +723,7 @@ header {
     }
     .hero {
         &__title {
-            margin-left: 6px;
+            margin: 0 auto;
             @include h3-mob;
         }
         &__subtitle {
@@ -745,6 +745,7 @@ header {
         }
         &__title {
             padding-bottom: 2px;
+            margin: 0 auto;
             @include h3-mob;
         }
         &__subtitle {
@@ -755,7 +756,7 @@ header {
             max-width: 81vw;
             margin: 40px 0 0;
             img {
-                width: 100%;
+                max-width: 100%;
             }
         }
     }
@@ -799,7 +800,8 @@ header {
             @include h3-mob;
         }
         &__container {
-            margin: 42px 0 0;
+            max-width: 300px;
+            margin: 42px auto 0;
             column-gap: 30px;
             row-gap: 30px;
             justify-content: flex-start;
@@ -832,7 +834,7 @@ header {
             text-align: justify;
         }
         &__img {
-            width: 94%;
+            max-width: 94%;
             margin: 40px 0 0 0;
         }
         .credit-card {
@@ -874,7 +876,7 @@ header {
         }
         &__img {
             margin: 0;
-            width: 87%;
+            max-width: 87%;
         }
     }
 }

@@ -637,7 +637,7 @@ header .menu__btn > span::after {
     padding: 100px 0;
     list-style: none;
     text-align: center;
-    background-color: #F6F6F6;
+    background-color: #FAFAFA;
     box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
   }
   header .menu__item {
@@ -653,7 +653,7 @@ header .menu__btn > span::after {
     line-height: 115%;
   }
   header .menu__item:hover {
-    background-color: #cfd8dc;
+    background-color: #CDCDCD;
   }
   header #menu__toggle:checked ~ .menu__btn > span {
     transform: rotate(45deg);
@@ -683,7 +683,7 @@ header .menu__btn > span::after {
   }
 
   .hero__title {
-    margin-left: 6px;
+    margin: 0 auto;
     font-size: 2.5rem;
     font-family: Georgia;
     font-style: normal;
@@ -709,6 +709,7 @@ header .menu__btn > span::after {
   }
   .about__title {
     padding-bottom: 2px;
+    margin: 0 auto;
     font-size: 2.5rem;
     font-family: Georgia;
     font-style: normal;
@@ -725,7 +726,7 @@ header .menu__btn > span::after {
     margin: 40px 0 0;
   }
   .about__img img {
-    width: 100%;
+    max-width: 100%;
   }
 
   .pets .wrapper {
@@ -776,7 +777,8 @@ header .menu__btn > span::after {
     letter-spacing: 0.15rem;
   }
   .help__container {
-    margin: 42px 0 0;
+    max-width: 300px;
+    margin: 42px auto 0;
     column-gap: 30px;
     row-gap: 30px;
     justify-content: flex-start;
@@ -817,7 +819,7 @@ header .menu__btn > span::after {
     text-align: justify;
   }
   .donation__img {
-    width: 94%;
+    max-width: 94%;
     margin: 40px 0 0 0;
   }
   .donation .credit-card {
@@ -861,7 +863,7 @@ header .menu__btn > span::after {
   }
   .footer__img {
     margin: 0;
-    width: 87%;
+    max-width: 87%;
   }
 }
 

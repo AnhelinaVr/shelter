@@ -407,14 +407,17 @@ header .menu__btn > span::after {
   header .menu__item {
     display: block;
     padding: 12px 24px;
-    color: #333;
-    font-family: "Roboto", sans-serif;
-    font-size: 20px;
-    font-weight: 600;
     text-decoration: none;
+    color: #545454;
+    font-family: Georgia;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2rem;
+    letter-spacing: 0.12rem;
+    line-height: 115%;
   }
   header .menu__item:hover {
-    background-color: #cfd8dc;
+    background-color: #F6F6F6;
   }
   header #menu__toggle:checked ~ .menu__btn > span {
     transform: rotate(45deg);
