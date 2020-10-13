@@ -637,17 +637,20 @@ header .menu__btn > span::after {
     padding: 100px 0;
     list-style: none;
     text-align: center;
-    background-color: #CDCDCD;
+    background-color: #F6F6F6;
     box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
   }
   header .menu__item {
     display: block;
     padding: 12px 24px;
-    color: #333;
-    font-family: "Roboto", sans-serif;
-    font-size: 20px;
-    font-weight: 600;
     text-decoration: none;
+    color: #545454;
+    font-family: Georgia;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2rem;
+    letter-spacing: 0.12rem;
+    line-height: 115%;
   }
   header .menu__item:hover {
     background-color: #cfd8dc;
