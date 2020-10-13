@@ -4,17 +4,11 @@
     box-sizing: border-box;
 }
 
- :root {
+:root {
     font-size: 10px;
     font-family: Arial;
 }
 
-// -----------------------
-$start-screen-gradient-bg: url('/assets/images/noise_transparent@2x.png'),
-radial-gradient(100% 215.42% at 0% 0%,
-#5B483A 0%,
-#262425 100%),
-#211F20;
 $footer-gradient-background :url('/assets/images/noise_transparent@2x.png'),
 radial-gradient(110.67% 538.64% at 5.73% 50%,
 #513D2F 0%,
@@ -32,7 +26,6 @@ $color-dark-l :#545454;
 $color-dark-xl: #545454;
 $color-dark-2xl :#444444;
 $color-dark-3xl: #292929;
-// -----------------------
 @mixin h2 {
     line-height: 130%;
     font-family: Georgia;
@@ -49,17 +42,6 @@ $color-dark-3xl: #292929;
     }
     letter-spacing: 0.21rem;
     line-height: 130%;
-}
-
-@mixin h3-mob {
-    font: {
-        size: 2.5rem;
-        family: Georgia;
-        style: normal;
-        weight: normal;
-    }
-    text-align: center;
-    letter-spacing: 0.15rem;
 }
 
 @mixin h4 {
@@ -83,26 +65,6 @@ $color-dark-3xl: #292929;
     line-height: 110%;
 }
 
-@mixin paragraph-l {
-    font: {
-        family: Arial;
-        style: normal;
-        weight: normal;
-        size: 1.5rem;
-    }
-    line-height: 162%;
-}
-
-@mixin paragraph-s {
-    font: {
-        family: Arial;
-        style: italic;
-        weight: normal;
-        size: 1.2rem;
-    }
-    line-height: 153%;
-}
-
 .wrapper {
     max-width: 1200px;
     margin: 0 auto;
@@ -113,10 +75,8 @@ $color-dark-3xl: #292929;
     margin: 0;
     background: transparent;
     border: none;
-    font-family: Georgia;
     color: $color-dark-3xl;
-    font-weight: normal;
-    letter-spacing: 0.11rem;
+    @include h4;
     &:hover {
         cursor: pointer;
         border: 2px solid transparent;
@@ -229,13 +189,13 @@ $color-dark-3xl: #292929;
 }
 
 header {
-    position: absolute;
-    top: 60px;
     width: 100%;
+    background: $color-light-xl;
     .hamburger-menu {
         display: none;
     }
     .wrapper {
+        padding: 30px 0;
         display: flex;
         justify-content: space-between;
         .logo {
@@ -244,14 +204,14 @@ header {
             &__title {
                 font-weight: normal;
                 font-family: Georgia;
-                color: $color-primary;
+                color: $color-dark-l;
                 line-height: 110%;
                 letter-spacing: 0.19rem;
                 font-size: 3.2rem;
                 padding-bottom: 10px;
             }
             &__subtitle {
-                color: $color-light-xl;
+                color: $color-dark-3xl;
                 font-size: 1.3rem;
                 line-height: 110%;
                 letter-spacing: 0.13rem;
@@ -275,203 +235,58 @@ header {
             padding-bottom: 3px;
             font-size: 1.5rem;
             line-height: 160%;
-            color: $color-dark-s;
+            color: $color-dark-l;
             text-decoration: none;
             &:hover {
-                color: $color-light-s;
+                color: $color-dark-3xl;
             }
             &_active {
-                color: $color-light-s;
                 border-bottom: 3px solid $color-primary;
             }
         }
     }
 }
 
-.hero-bg {
-    background: $start-screen-gradient-bg;
-}
-
-.hero {
-    display: flex;
-    padding-top: 180px;
-    &__content {
-        padding-top: 163px;
-    }
-    &__title {
-        max-width: 310px;
-        color: $color-light-xl;
-        @include h2;
-    }
-    &__subtitle {
-        margin-top: 44px;
-        line-height: 160%;
-        font-size: 1.5rem;
-        max-width: 92%;
-        color: $color-dark-s;
-    }
-    &__button {
-        margin-top: 40px;
-    }
-    &__img {
-        display: flex;
-    }
-}
-
-.about {
-    .wrapper {
-        padding: 80px 0 100px;
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap-reverse;
-    }
-    &__img {
-        margin-right: 120px;
-    }
-    &__content {
-        padding-top: 14px;
-        max-width: 430px;
-    }
-    &__title {
-        max-width: 370px;
-        color: $color-dark-l;
-        @include h3;
-    }
-    &__subtitle {
-        margin-top: 25px;
-        color: $color-dark-xl;
-        @include paragraph-l;
-    }
-}
-
 .pets {
+    text-align: center;
     background: $color-light-l;
     .wrapper {
-        padding: 80px 0 101px;
-        text-align: center;
-    }
-    &__title {
-        @include h3;
-        margin-left: 2px;
-        color: $color-dark-l;
-    }
-    &__slider {
-        margin-top: 60px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    &__cards-container {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        max-width: 990px;
-        width: 100%;
-    }
-    &__card {
-        border-radius: 9px;
-        padding-bottom: 28px;
-        background: $color-light-s;
-        &:hover {
-            background: $color-light-xl;
-            cursor: pointer;
-        }
-        &_title {
-            padding-top: 27px;
-            padding-bottom: 31px;
-            color: $color-dark-3xl;
-            @include h4;
-        }
-    }
-    &__button-big {
-        margin-top: 62px;
-    }
-}
-
-.help {
-    .wrapper {
-        padding: 79px 0 100px;
-        text-align: center;
+        padding: 80px 0 100px;
     }
     &__title {
         margin-left: 3px;
         @include h3;
         color: $color-dark-l;
     }
-    &__container {
+    &__slider {
         margin-top: 60px;
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        column-gap: 120px;
-        row-gap: 55px;
-    }
-    &__item {
-        white-space: nowrap;
-    }
-    &__item-name {
-        padding-top: 28px;
-        @include h4;
-        color: $color-dark-l;
-    }
-    .first-line {
-        width: 85.5%;
-        display: flex;
-        justify-content: space-between;
-        margin: 0 auto 55px;
-    }
-    .second-line {
-        margin: 0 auto;
-        width: 70%;
-        display: flex;
-        justify-content: space-around;
-    }
-}
-
-.donation {
-    background: $color-light-l;
-    .wrapper {
-        padding: 83px 0 100px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap-reverse;
-    }
-    &__img {
-        margin-right: 31px;
-    }
-    &__content {
-        max-width: 380px;
-    }
-    &__title {
-        @include h3;
-    }
-    &__subtitle {
-        padding-top: 20px;
-        letter-spacing: 0.09rem;
-        @include h5;
-        color: $color-dark-l;
-    }
-    &__description {
-        @include paragraph-s;
-        color: $color-dark-m;
-    }
-    .credit-card {
-        justify-content: space-between;
-        align-items: center;
-        display: flex;
-        margin: 20px 0;
-        max-width: 350px;
-        padding: 10.5px 15px;
-        border-radius: 9px;
-        background: $color-primary;
-        &__number {
-            text-decoration: none;
-            color: $color-dark-l;
-            @include h4;
+        &__buttons {
+            display: flex;
+            margin: 0 auto;
+            max-width: 340px;
+            justify-content: space-between;
         }
-        img {
-            margin-right: 3px;
+    }
+    &__cards-container {
+        margin-bottom: 32px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    &__card {
+        border-radius: 9px;
+        padding-bottom: 28px;
+        margin-bottom: 32px;
+        background: $color-light-s;
+        &:hover {
+            background: $color-light-xl;
+            cursor: pointer;
+        }
+        &_title {
+            padding-top: 28px;
+            padding-bottom: 31px;
+            color: $color-dark-3xl;
+            @include h4;
         }
     }
 }
@@ -517,84 +332,27 @@ header {
 
 @media only screen and (max-width: 1279px) {
     header {
-        top: 30px;
         .wrapper {
-            padding: 0 30px;
-        }
-    }
-    .hero {
-        flex-wrap: wrap;
-        padding-top: 150px;
-        &__content {
-            padding: 0;
-            margin: 0 auto;
-            max-width: 500px;
-        }
-        &__title {
-            margin-left: 20px;
-        }
-        &__subtitle {
-            margin-left: 20px;
-        }
-        &__button {
-            display: block;
-            margin: 40px auto 100px;
-        }
-        &__img {
-            max-width: 74.19vw;
-            margin-left: auto;
-            margin-right: 31px;
-            img {
-                width: 100%;
-            }
-        }
-    }
-    .about {
-        .wrapper {
-            padding-top: 65px;
-        }
-        &__img {
-            flex-basis: 100%;
-            margin: 80px 0 0;
-            img {
-                margin: 0 auto;
-                display: block;
-            }
+            padding: 30px 30px;
+            display: flex;
+            justify-content: space-between;
         }
     }
     .pets {
+        .wrapper {
+            padding: 72px 74px 75px;
+        }
         &__slider {
-            justify-content: center;
+            margin-top: 38px;
         }
         &__cards-container {
-            max-width: 580px;
+            margin-bottom: 9px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
         }
-        &__card:last-child {
+        &__card:not(:nth-last-child(n+3)) {
             display: none;
-        }
-        &__slider-button_left {
-            margin-right: 12px;
-        }
-        &__slider-button_right {
-            margin-left: 12px;
-        }
-    }
-    .help {
-        &__container {
-            margin: 59px 39px 0 39px;
-            column-gap: 60px;
-            row-gap: 55px;
-        }
-        &__item {
-            width: 17rem;
-        }
-    }
-    .donation {
-        .wrapper {
-            padding-top: 80px;
-        }
-        &__img {
-            margin: 60px 0 0 0;
         }
     }
     .footer {
@@ -604,7 +362,7 @@ header {
             flex-wrap: wrap;
         }
         &__img {
-            margin-top: 25px;
+            margin-top: 20px;
         }
         .contacts {
             margin-right: 27px;
@@ -617,11 +375,10 @@ header {
     }
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width:767px) {
     header {
-        top: 31px;
         .wrapper {
-            padding: 0 10px;
+            padding: 30px 10px;
         }
         .hamburger-menu {
             display: block;
@@ -642,8 +399,8 @@ header {
             align-items: center;
             /* центрируем содержимое кнопки */
             position: absolute;
-            top: 17px;
-            right: 43px;
+            top: 16px;
+            right: 40px;
             width: 30px;
             height: 26px;
             cursor: pointer;
@@ -657,7 +414,7 @@ header {
             position: absolute;
             width: 100%;
             height: 2px;
-            background-color: $color-primary;
+            background-color: #000;
         }
         .menu__btn>span::before {
             content: "";
@@ -723,160 +480,47 @@ header {
             transition-duration: 0.3s;
         }
     }
-    .hero {
-        &__title {
-            margin-left: 6px;
-            @include h3-mob;
-        }
-        &__subtitle {
-            margin-left: 13px;
-            margin-top: 43px;
-            text-align: center;
-        }
-        &__button {
-            margin: 41px auto 106px;
-        }
-        &__img {
-            max-width: 81.19vw;
-            margin-right: 10px;
-        }
-    }
-    .about {
-        .wrapper {
-            padding: 28px 25px 43px;
-        }
-        &__title {
-            padding-bottom: 2px;
-            @include h3-mob;
-        }
-        &__subtitle {
-            margin-top: 23px;
-            text-align: justify;
-        }
-        &__img {
-            max-width: 81vw;
-            margin: 40px 0 0;
-            img {
-                width: 100%;
-            }
-        }
-    }
     .pets {
         .wrapper {
-            padding: 41px 0;
+            padding: 40px 0 30px;
         }
         &__title {
-            padding-bottom: 2px;
-            @include h3-mob;
+            font-size: 2.5rem;
+            letter-spacing: 0.15rem;
         }
         &__slider {
-            margin-top: 40px;
-            flex-wrap: wrap;
+            margin-top: 50px;
+        }
+        &__slider__buttons {
+            max-width: 300px;
         }
         &__cards-container {
-            justify-content: center;
+            margin: 0;
         }
-        &__card:not(:first-child) {
-            display: none;
-        }
-        &__slider-button_left {
-            order: 2;
-            margin-top: 22px;
-            margin-right: 40px;
-        }
-        &__slider-button_right {
-            order: 3;
-            margin-top: 22px;
-            margin-left: 40px;
-        }
-        &__button-big {
-            margin-top: 42px;
-        }
-    }
-    .help {
-        .wrapper {
-            padding: 43px 15px 42px;
-        }
-        &__title {
-            @include h3-mob;
-        }
-        &__container {
-            margin: 42px 0 0;
-            column-gap: 30px;
-            row-gap: 30px;
-            justify-content: flex-start;
-        }
-        &__item {
-            width: 130px;
-        }
-        &__item-name {
-            padding-top: 19px;
-            letter-spacing: 0.09rem;
-            @include h5;
-        }
-        &__img {
-            width: 50px;
-        }
-    }
-    .donation {
-        .wrapper {
-            padding: 42px 20px 42px;
-        }
-        &__title {
-            @include h3-mob;
-        }
-        &__subtitle {
-            padding-top: 23px;
-            letter-spacing: normal;
-            text-align: center;
-        }
-        &__description {
-            text-align: justify;
-        }
-        &__img {
-            width: 94%;
-            margin: 40px 0 0 0;
-        }
-        .credit-card {
-            justify-content: flex-start;
-            margin: 25px auto 20px;
-            max-width: 280px;
-            padding: 10.5px 8px;
-            img {
-                margin: 0 14px 0px 6px;
-            }
-            &__number {
-                font-size: 1.5rem;
-                letter-spacing: 0.1rem;
+        &__card {
+            margin-bottom: 31px;
+            &:nth-child(2n) {
+                display: none;
             }
         }
     }
     .footer {
-        .wrapper {
-            padding: 30px 10px 0 10px;
-        }
-        &__title {
-            @include h3-mob;
-            padding-top: 0;
-        }
         .contacts {
-            margin: 0;
-            padding: 0;
-            .footer__item {
-                justify-content: center;
-            }
+            margin: 0 auto;
+            padding: 0 10px 24px;
         }
-        .location {
-            .footer__title {
-                padding: 0 20px 40px;
-            }
+        &__item:last-child {
+            margin: 0;
         }
         &__item_longer {
-            margin: 0 0 40px;
+            margin-top: -7px;
+        }
+        &__title {
+            padding: 16px 0 39px;
+            text-align: center;
         }
         &__img {
-            margin: 0;
-            width: 87%;
+            margin-top: 95px;
         }
     }
 }
