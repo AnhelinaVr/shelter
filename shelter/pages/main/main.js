@@ -256,6 +256,7 @@ document.querySelector('.pets__slider').addEventListener('click', (e) => {
         let pet_medical = ['<b>Parasites: </b>' + pet.parasites.join(', '), '<b>Diseases: </b>' + pet.diseases.join(', '), '<b>Inoculations: </b>' + pet.inoculations.join(', '), '<b>Age: </b>' + pet.age];
         pet__characteristics.innerHTML = '';
         let pet__img = document.createElement('img');
+        pet__img.classList.add('modal__img');
         pet__img.src = pet.img;
         pet__img.alt = pet.name;
         modal.querySelector('.modal-body').insertBefore(pet__img, pets__card_modal);

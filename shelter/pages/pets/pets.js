@@ -230,6 +230,8 @@ function getItemSlide() {
 
 
 
+
+
 const closeModalButtons = document.querySelectorAll('[data-close-button]');
 const overlay = document.getElementById('overlay');
 const modal = document.getElementById('modal');
@@ -270,8 +272,8 @@ pet__characteristics.classList.add('pet__characteristics')
 let pets__card_modal = document.createElement('div');
 pets__card_modal.classList.add('pets__card_modal');
 
-document.querySelector('.pets__slider').addEventListener('click', (e) => {
-    if (e.target.offsetParent.classList.contains('pets__card') || e.target.classList.contains('pets__card')) {
+document.querySelector('.pets__slider').addEventListener('click', (event) => {
+    if (event.target.offsetParent.classList.contains('pets__card') || event.target.classList.contains('pets__card')) {
         let pet__name = document.createElement('h3');
         pet__name.classList.add('pet__name');
         let pet__type = document.createElement('h4');
@@ -288,20 +290,21 @@ document.querySelector('.pets__slider').addEventListener('click', (e) => {
         pets__card_modal.appendChild(pet__characteristics);
         modal.querySelector('.modal-body').appendChild(pets__card_modal);
         openModal();
-        let pet = pets.find(pet => pet.name === e.target.parentElement.children[1].textContent);
+        let pet = pets.find(pet => pet.name === event.target.parentElement.children[1].textContent);
         pet__name.innerText = pet.name;
         pet__type.innerText = `${pet.type} - ${pet.breed}`;
         pet__description.innerText = pet.description;
         let pet_medical = ['<b>Parasites: </b>' + pet.parasites.join(', '), '<b>Diseases: </b>' + pet.diseases.join(', '), '<b>Inoculations: </b>' + pet.inoculations.join(', '), '<b>Age: </b>' + pet.age];
         pet__characteristics.innerHTML = '';
         let pet__img = document.createElement('img');
+        pet__img.classList.add('modal__img');
         pet__img.src = pet.img;
         pet__img.alt = pet.name;
         modal.querySelector('.modal-body').insertBefore(pet__img, pets__card_modal);
         for (let i = 3; i >= 0; i--) {
             let li = document.createElement('li');
             pet__characteristics.appendChild(li);
-            // console.log(li);
+
             li.innerHTML = pet_medical[i];
         }
     }

@@ -265,7 +265,6 @@ body {
         padding: 10px 15px;
         display: flex;
         justify-content: flex-end;
-        border-bottom: 1px solid black;
         .close-button {
             cursor: pointer;
             border: none;
@@ -278,10 +277,16 @@ body {
     .modal-body {
         padding: 10px 15px;
         background-color: $color-light-s;
+        border-radius: 9px;
         display: flex;
-        img {
-            width: 100%;
+        .modal__img {
             max-width: 500px;
+            @media screen and (max-width: 767px) {
+                width: 350px;
+            }
+            @media screen and (max-width: 550px) {
+                display: none;
+            }
         }
         .pets__card_modal {
             width: 400px;
@@ -300,6 +305,7 @@ body {
         }
         .pet__characteristics {
             margin-top: 40px;
+            margin-left: 15px;
             li {
                 list-style-type: none;
                 position: relative;

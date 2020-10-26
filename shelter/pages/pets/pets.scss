@@ -4,6 +4,10 @@ header {
     z-index: 2;
     width: 100%;
     background: $color-light-xl;
+    .disabled {
+        pointer-events: none;
+        cursor: default;
+    }
     .hamburger-menu,
     .logo_burger {
         display: none;
@@ -97,6 +101,7 @@ header {
         border-radius: 9px;
         padding-bottom: 28px;
         background: $color-light-s;
+        position: relative;
         &:hover {
             background: $color-light-xl;
             cursor: pointer;
