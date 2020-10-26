@@ -280,11 +280,11 @@ body {
         border-radius: 9px;
         display: flex;
         .modal__img {
-            max-width: 500px;
+            width: 500px;
             @media screen and (max-width: 767px) {
                 width: 350px;
             }
-            @media screen and (max-width: 550px) {
+            @media screen and (max-width: 600px) {
                 display: none;
             }
         }

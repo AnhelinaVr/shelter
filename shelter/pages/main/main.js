@@ -249,8 +249,13 @@ document.querySelector('.pets__slider').addEventListener('click', (e) => {
         pets__card_modal.appendChild(pet__characteristics);
         modal.querySelector('.modal-body').appendChild(pets__card_modal);
         openModal();
-        let pet = pets.find(pet => pet.name === e.target.parentElement.children[1].textContent);
+        let pet;
+        if (e.target.classList.contains('pets__card')) {
+            pet = pets.find(pet => pet.name === e.target.children[1].textContent);
+            pet__name.innerText = pet.name;
+        } else pet = pets.find(pet => pet.name === e.target.parentElement.children[1].textContent);
         pet__name.innerText = pet.name;
+
         pet__type.innerText = `${pet.type} - ${pet.breed}`;
         pet__description.innerText = pet.description;
         let pet_medical = ['<b>Parasites: </b>' + pet.parasites.join(', '), '<b>Diseases: </b>' + pet.diseases.join(', '), '<b>Inoculations: </b>' + pet.inoculations.join(', '), '<b>Age: </b>' + pet.age];

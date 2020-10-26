@@ -676,13 +676,3 @@ header {
         align-items: center;
     }
 }
-
-@media only screen and (max-width: 550px) {
-    .modal {
-        .modal-body {
-            .modal__img {
-                display: none;
-            }
-        }
-    }
-}

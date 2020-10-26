@@ -183,14 +183,14 @@ body.lock {
   display: flex;
 }
 .modal .modal-body .modal__img {
-  max-width: 500px;
+  width: 500px;
 }
 @media screen and (max-width: 767px) {
   .modal .modal-body .modal__img {
     width: 350px;
   }
 }
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 600px) {
   .modal .modal-body .modal__img {
     display: none;
   }

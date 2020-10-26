@@ -290,7 +290,11 @@ document.querySelector('.pets__slider').addEventListener('click', (event) => {
         pets__card_modal.appendChild(pet__characteristics);
         modal.querySelector('.modal-body').appendChild(pets__card_modal);
         openModal();
-        let pet = pets.find(pet => pet.name === event.target.parentElement.children[1].textContent);
+        if (event.target.classList.contains('pets__card')) {
+            pet = pets.find(pet => pet.name === event.target.children[1].textContent);
+            pet__name.innerText = pet.name;
+        } else pet = pets.find(pet => pet.name === event.target.parentElement.children[1].textContent);
+        pet__name.innerText = pet.name;
         pet__name.innerText = pet.name;
         pet__type.innerText = `${pet.type} - ${pet.breed}`;
         pet__description.innerText = pet.description;

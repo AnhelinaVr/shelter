@@ -183,14 +183,14 @@ body.lock {
   display: flex;
 }
 .modal .modal-body .modal__img {
-  max-width: 500px;
+  width: 500px;
 }
 @media screen and (max-width: 767px) {
   .modal .modal-body .modal__img {
     width: 350px;
   }
 }
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 600px) {
   .modal .modal-body .modal__img {
     display: none;
   }
@@ -1015,12 +1015,6 @@ header .menu__btn > span::after {
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
-}
-
-@media only screen and (max-width: 550px) {
-  .modal .modal-body .modal__img {
-    display: none;
-  }
 }
 
 /*# sourceMappingURL=main.css.map */
