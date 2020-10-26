@@ -5,10 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our pets</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="pets.css">
 </head>
 
 <body>
+    <!-- MODAL WINDOW -->
+    <div class="modal" id="modal">
+        <div class="modal-header">
+            <button data-close-button class="button button__little button__close"></button>
+        </div>
+        <div class="modal-body">
+
+        </div>
+    </div>
+    <div id="overlay"></div>
     <!-- HEADER -->
     <header>
         <div class="wrapper">
@@ -17,6 +28,10 @@
                 <span class="logo__subtitle">Shelter for pets in Boston</span>
             </div>
             <div class="hamburger-menu">
+                <div class="logo logo_burger">
+                    <h1 class="logo__title">Cozy House</h1>
+                    <span class="logo__subtitle">Shelter for pets in Boston</span>
+                </div>
                 <input id="menu__toggle" type="checkbox" />
                 <label class="menu__btn" for="menu__toggle">
             <span></span>
@@ -58,55 +73,18 @@
                 <h3 class="pets__title">Our friends who </h3>
                 <h3 class="pets__title">are looking for a house</h3>
                 <div class="pets__slider">
-                    <div class="pets__cards-container">
-                        <div class="pets__card">
-                            <img src="../../assets/images/pets-katrine.png" alt="Katrine" class="pets__card_img">
-                            <h4 class="pets__card_title">Katrine</h4>
-                            <button class="button button__big button__big_secondary">Learn more</button>
-                        </div>
-                        <div class="pets__card">
-                            <img src="../../assets/images/pets-jennifer.png" alt="Jennifer" class="pets__card_img">
-                            <h4 class="pets__card_title">Jennifer</h4>
-                            <button class="button button__big button__big_secondary">Learn more</button>
-                        </div>
-                        <div class="pets__card">
-                            <img src="../../assets/images/pets-woody.png" alt="Woody" class="pets__card_img">
-                            <h4 class="pets__card_title">Woody</h4>
-                            <button class="button button__big button__big_secondary">Learn more</button>
-                        </div>
-                        <div class="pets__card">
-                            <img src="../../assets/images/pets-sophia.png" alt="Sophia" class="pets__card_img">
-                            <h4 class="pets__card_title">Sophia</h4>
-                            <button class="button button__big button__big_secondary">Learn more</button>
-                        </div>
-                        <div class="pets__card">
-                            <img src="../../assets/images/pets-timmy.png" alt="Timmy" class="pets__card_img">
-                            <h4 class="pets__card_title">Timmy</h4>
-                            <button class="button button__big button__big_secondary">Learn more</button>
-                        </div>
-                        <div class="pets__card">
-                            <img src="../../assets/images/pets-charly.png" alt="Charly" class="pets__card_img">
-                            <h4 class="pets__card_title">Charly</h4>
-                            <button class="button button__big button__big_secondary">Learn more</button>
-                        </div>
-                        <div class="pets__card">
-                            <img src="../../assets/images/pets-scarlet.png" alt="Scarlett" class="pets__card_img">
-                            <h4 class="pets__card_title">Scarlett</h4>
-                            <button class="button button__big button__big_secondary">Learn more</button>
-                        </div>
-                        <div class="pets__card">
-                            <img src="../../assets/images/pets-freddie.png" alt="Freddie" class="pets__card_img">
-                            <h4 class="pets__card_title">Freddie</h4>
-                            <button class="button button__big button__big_secondary">Learn more</button>
-                        </div>
+
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper pets__cards-container"></div>
                     </div>
                     <div class="pets__slider__buttons">
-                        <button class="button button__little button__little_inactive button__arrow_small_left_double_inactive pets__slider-button" disabled></button>
-                        <button class="button button__little button__little_inactive button__arrow_small_left_inactive pets__slider-button" disabled></button>
-                        <button class="button button__little button__little_active pets__slider-button">1</button>
-                        <button class="button button__little button__arrow_small_right pets__slider-button"></button>
+                        <button class="button button__little button__arrow_small_left_double pets__slider-button"></button>
+                        <button class="button button__little button__arrow_small_left pets__slider-button_left swiper-button-prev"></button>
+                        <div class="button button__little button__little_active pets__slider-button"></div>
+                        <button class="button button__little button__arrow_small_right pets__slider-button_right swiper-button-next"></button>
                         <button class="button button__little button__arrow_small_right_double pets__slider-button"></button>
                     </div>
+
                 </div>
             </div>
         </section>
@@ -138,6 +116,7 @@
             <img src="../../assets/images/footer-puppy.png" alt="Footer dog" class="footer__img">
         </div>
     </footer>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="pets.js"></script>
 </body>
 

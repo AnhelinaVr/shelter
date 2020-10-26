@@ -5,10 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cozy House</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 
 <body>
+    <!-- MODAL WINDOW -->
+    <div class="modal" id="modal">
+        <div class="modal-header">
+            <button data-close-button class="button button__little button__close"></button>
+        </div>
+        <div class="modal-body">
+
+        </div>
+    </div>
+    <div id="overlay"></div>
     <!-- HEADER -->
     <header>
         <div class="wrapper">
@@ -17,6 +28,10 @@
                 <span class="logo__subtitle">Shelter for pets in Boston</span>
             </div>
             <div class="hamburger-menu">
+                <div class="logo logo_burger">
+                    <h1 class="logo__title">Cozy House</h1>
+                    <span class="logo__subtitle">Shelter for pets in Boston</span>
+                </div>
                 <input id="menu__toggle" class="menu__toggle" type="checkbox" />
                 <label class="menu__btn" for="menu__toggle">
             <span></span>
@@ -60,7 +75,7 @@
                         <h2 class="hero__title">Not only people</h2>
                         <h2 class="hero__title">need a house</h2>
                         <p class="hero__subtitle">We offer to give a chance to a little and nice puppy with an extremely wide and open heart. He or she will love you more than anybody else in the world, you will see!</p>
-                        <button class="button button__big button__big_primary hero__button">
+                        <button class="button button__big button__big_primary hero__button" onclick="goToPetsPage()">
                             Make a friend</button>
                     </div>
                     <div class="hero__img"><img src="../../assets/images/start-screen-puppy.png" alt="Puppy"></div>
@@ -85,27 +100,20 @@
                 <h3 class="pets__title">Our friends who </h3>
                 <h3 class="pets__title">are looking for a house</h3>
                 <div class="pets__slider">
-                    <button class="button button__little button__arrow_left pets__slider-button_left"></button>
-                    <div class="pets__cards-container">
-                        <div class="pets__card">
-                            <img src="../../assets/images/pets-katrine.png" alt="Katrine" class="pets__card_img">
-                            <h4 class="pets__card_title">Katrine</h4>
-                            <button class="button button__big button__big_secondary">Learn more</button>
-                        </div>
-                        <div class="pets__card">
-                            <img src="../../assets/images/pets-jennifer.png" alt="Jennifer" class="pets__card_img">
-                            <h4 class="pets__card_title">Jennifer</h4>
-                            <button class="button button__big button__big_secondary">Learn more</button>
-                        </div>
-                        <div class="pets__card">
-                            <img src="../../assets/images/pets-woody.png" alt="Woody" class="pets__card_img">
-                            <h4 class="pets__card_title">Woody</h4>
-                            <button class="button button__big button__big_secondary">Learn more</button>
-                        </div>
+                    <div class="button button__little button__arrow_left pets__slider-button_left swiper-button-prev" onclick="getItemSlide()"></div>
+
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper pets__cards-container"></div>
+                        <!-- Add Pagination -->
+                        <!-- <div class="swiper-pagination"></div> -->
                     </div>
-                    <button class="button button__little button__arrow_right pets__slider-button_right "></button>
+
+                    <div class="button button__little button__arrow_right pets__slider-button_right swiper-button-next" onclick="getItemSlide()"></div>
                 </div>
-                <button class="button button__big button__big_primary pets__button-big">Get to know the rest</button>
+                <!-- SLIDER -->
+
+
+                <button class="button button__big button__big_primary pets__button-big" onclick="goToPetsPage()">Get to know the rest</button>
             </div>
         </section>
         <!-- HELP -->
@@ -200,6 +208,7 @@
             <img src="../../assets/images/footer-puppy.png" alt="Footer dog" class="footer__img">
         </div>
     </footer>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="main.js"></script>
 </body>
 
