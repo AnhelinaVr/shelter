@@ -444,8 +444,10 @@ header {
         }
         /* контейнер меню */
         .menu__box {
-            display: block;
+            display: flex;
+            flex-direction: column;
             position: fixed;
+            justify-content: center;
             visibility: hidden;
             top: 0;
             right: -100%;

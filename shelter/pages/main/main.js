@@ -1,27 +1,30 @@
 let burger = document.querySelector('#menu__toggle');
 document.addEventListener('click', (event) => {
     if (event.target.classList.contains('menu__toggle')) {
-        if (burger.checked) {
+        if (burger.checked)
             disableScroll();
-            document.querySelector('.logo_burger').style.display = 'block';
-            document.querySelector('.logo').style.display = 'none';
-        } else {
+        else
             enableScroll();
-            document.querySelector('.logo_burger').style.display = 'none';
-            document.querySelector('.logo').style.display = 'block';
-        }
     }
-
 });
 
 function disableScroll() {
     document.body.style.overflow = 'hidden';
     overlay.classList.add('active');
+    if (burger.checked) {
+        document.querySelector('.logo_burger').style.display = 'block';
+        document.querySelector('.logo').style.display = 'none';
+    }
+
 }
 
 function enableScroll() {
     document.body.style.overflow = null;
     overlay.classList.remove('active');
+    if (!burger.checked) {
+        document.querySelector('.logo_burger').style.display = 'none';
+        document.querySelector('.logo').style.display = 'block';
+    }
 }
 
 let pets = []; // 8

@@ -1,18 +1,32 @@
 let burger = document.querySelector('#menu__toggle');
-document.addEventListener('click', (e) => {
-    if (e.target.classList.contains('menu__toggle')) {
-        if (burger.checked) {
+document.addEventListener('click', (event) => {
+    if (event.target.classList.contains('menu__toggle')) {
+        if (burger.checked)
             disableScroll();
-            document.querySelector('.logo_burger').style.display = 'block';
-            document.querySelector('.logo').style.display = 'none';
-        } else {
+        else
             enableScroll();
-            document.querySelector('.logo_burger').style.display = 'none';
-            document.querySelector('.logo').style.display = 'block';
-        }
+    }
+});
+
+function disableScroll() {
+    document.body.style.overflow = 'hidden';
+    overlay.classList.add('active');
+    if (burger.checked) {
+        document.querySelector('.logo_burger').style.display = 'block';
+        document.querySelector('.logo').style.display = 'none';
     }
 
-});
+}
+
+function enableScroll() {
+    document.body.style.overflow = null;
+    overlay.classList.remove('active');
+    if (!burger.checked) {
+        document.querySelector('.logo_burger').style.display = 'none';
+        document.querySelector('.logo').style.display = 'block';
+    }
+}
+
 document.querySelector('.pets__slider__buttons').addEventListener('click', (e) => {
     console.log(e.target);
     const doubleButRight = document.querySelector('.button__arrow_small_right_double'),
@@ -46,15 +60,6 @@ document.querySelector('.pets__slider__buttons').addEventListener('click', (e) =
     }
 });
 
-function disableScroll() {
-    document.body.style.overflow = 'hidden';
-    overlay.classList.add('active');
-}
-
-function enableScroll() {
-    document.body.style.overflow = null;
-    overlay.classList.remove('active');
-}
 
 let pets = []; // 8
 let fullPetsList = []; // 48

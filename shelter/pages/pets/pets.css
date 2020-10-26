@@ -252,7 +252,7 @@ body.lock {
 }
 #overlay.active {
   opacity: 1;
-  z-index: 10;
+  z-index: 2;
   pointer-events: all;
 }
 
@@ -323,7 +323,7 @@ header .list__link_active {
   background: #F6F6F6;
 }
 .pets .wrapper {
-  padding: 80px 0 100px;
+  padding: 200px 0 100px;
 }
 .pets__title {
   margin-left: 3px;
@@ -458,7 +458,7 @@ header .list__link_active {
   }
 
   .pets .wrapper {
-    padding: 72px 74px 75px;
+    padding: 190px 74px 75px;
   }
   .pets__slider {
     margin-top: 29px;
@@ -541,8 +541,8 @@ header .list__link_active {
     align-items: center;
     /* центрируем содержимое кнопки */
     position: absolute;
-    top: 45px;
-    right: 43px;
+    top: 47px;
+    right: 50px;
     width: 30px;
     height: 26px;
     cursor: pointer;
@@ -566,8 +566,10 @@ header .menu__btn > span::after {
     top: 10px;
   }
   header .menu__box {
-    display: block;
+    display: flex;
+    flex-direction: column;
     position: fixed;
+    justify-content: center;
     visibility: hidden;
     top: 0;
     right: -100%;
@@ -614,7 +616,7 @@ header .menu__btn > span::after {
   }
 
   .pets .wrapper {
-    padding: 40px 0 30px;
+    padding: 160px 0 100px;
   }
   .pets__title {
     font-size: 2.5rem;
