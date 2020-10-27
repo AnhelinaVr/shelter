@@ -273,3 +273,7 @@ document.querySelector('.pets__slider').addEventListener('click', (e) => {
         }
     }
 });
+
+function goToPetsPage() {
+    document.location.href = "../pets/pets.html";
+}
