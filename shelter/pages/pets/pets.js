@@ -1,66 +1,3 @@
-let burger = document.querySelector('#menu__toggle');
-document.addEventListener('click', (event) => {
-    if (event.target.classList.contains('menu__toggle')) {
-        if (burger.checked)
-            disableScroll();
-        else
-            enableScroll();
-    }
-});
-
-function disableScroll() {
-    document.body.style.overflow = 'hidden';
-    overlay.classList.add('active');
-    if (burger.checked) {
-        document.querySelector('.logo_burger').style.display = 'block';
-        document.querySelector('.logo').style.display = 'none';
-    }
-
-}
-
-function enableScroll() {
-    document.body.style.overflow = null;
-    overlay.classList.remove('active');
-    if (!burger.checked) {
-        document.querySelector('.logo_burger').style.display = 'none';
-        document.querySelector('.logo').style.display = 'block';
-    }
-}
-
-document.querySelector('.pets__slider__buttons').addEventListener('click', (e) => {
-    console.log(e.target);
-    const doubleButRight = document.querySelector('.button__arrow_small_right_double'),
-        doubleButLeft = document.querySelector('.button__arrow_small_left_double'),
-        smallRight = document.querySelector('.button__arrow_small_right'),
-        smallLeft = document.querySelector('.button__arrow_small_left');
-    let swiperSlide = swiper.activeIndex;
-    console.log(swiperSlide);
-    if (swiperSlide < 20 && swiperSlide > 4) {
-        doubleButRight.classList.remove('button__arrow_small_right_double_inactive');
-        doubleButRight.classList.add('button__arrow_small_right_double');
-        doubleButLeft.classList.remove('button__arrow_small_left_double_inactive');
-        doubleButLeft.classList.add('button__arrow_small_left_double');
-    } else if (swiperSlide <= 4 && swiperSlide < 20) {
-        doubleButLeft.classList.add('button__arrow_small_left_double_inactive');
-        doubleButLeft.classList.remove('button__arrow_small_left_double');
-    }
-    if (e.target == doubleButRight && swiperSlide < 20) {
-        console.log('eee');
-        swiperSlide = 20;
-        swiper.update();
-        doubleButRight.classList.add('button__arrow_small_right_double_inactive');
-        doubleButRight.classList.remove('button__arrow_small_right_double');
-        doubleButRight.classList.add('button__little_inactive');
-    }
-    if (e.target == doubleButLeft && swiperSlide < 4) {
-        swiper.activeIndex = 0;
-        swiper.update();
-        e.target.classList.add('button__arrow_small_left_double_inactive');
-        e.target.classList.add('button__little_inactive');
-    }
-});
-
-
 let pets = []; // 8
 let fullPetsList = []; // 48
 const request = new XMLHttpRequest();
@@ -137,11 +74,97 @@ var swiper = new Swiper('.swiper-container', {
 
 });
 
-
-
-
-
 request.send();
+
+let burger = document.querySelector('#menu__toggle');
+document.addEventListener('click', (event) => {
+    if (event.target.classList.contains('menu__toggle')) {
+        if (burger.checked)
+            disableScroll();
+        else
+            enableScroll();
+    }
+});
+
+function disableScroll() {
+    document.body.style.overflow = 'hidden';
+    overlay.classList.add('active');
+    if (burger.checked) {
+        document.querySelector('.logo_burger').style.display = 'block';
+        document.querySelector('.logo').style.display = 'none';
+    }
+
+}
+
+function enableScroll() {
+    document.body.style.overflow = null;
+    overlay.classList.remove('active');
+    if (!burger.checked) {
+        document.querySelector('.logo_burger').style.display = 'none';
+        document.querySelector('.logo').style.display = 'block';
+    }
+}
+let counter = 1;
+const doubleButRight = document.querySelectorAll('.button__arrow_small_double')[1],
+    doubleButLeft = document.querySelectorAll('.button__arrow_small_double')[0],
+    smallRight = document.querySelector('.swiper-button-next'),
+    smallLeft = document.querySelector('.swiper-button-prev'),
+    pagination = document.querySelector('.pagination');
+
+pagination.textContent = counter;
+document.querySelector('.pets__slider__buttons').addEventListener('click', (e) => {
+
+    if (e.target == smallLeft) {
+        counter--;
+        if (doubleButLeft.classList.contains('button__little_inactive')) {
+            pagination.textContent = ++counter;
+        }
+    }
+    if (e.target == smallRight) {
+        counter++;
+        if (doubleButRight.classList.contains('button__little_inactive')) {
+            pagination.textContent = --counter;
+        }
+    }
+    pagination.textContent = counter;
+    if (e.target == doubleButRight) {
+        swiper.activeIndex = 20;
+
+        swiper.update();
+        doubleButRight.classList.add('button__arrow_small_inactive');
+        doubleButRight.classList.add('button__little_inactive');
+        doubleButLeft.classList.remove('button__arrow_small_inactive');
+        doubleButLeft.classList.remove('button__little_inactive');
+    }
+    if (e.target == doubleButLeft) {
+        swiper.slideTo(0);
+        swiper.update();
+        doubleButLeft.classList.add('button__arrow_small_inactive');
+        doubleButLeft.classList.add('button__little_inactive');
+        doubleButRight.classList.remove('button__arrow_small_inactive');
+        doubleButRight.classList.remove('button__little_inactive');
+    }
+    if (e.target == smallRight) {
+        if (smallRight.classList.contains('button__little_inactive')) {
+            doubleButRight.classList.add('button__arrow_small_inactive');
+            doubleButRight.classList.add('button__little_inactive');
+        }
+        doubleButLeft.classList.remove('button__arrow_small_inactive');
+        doubleButLeft.classList.remove('button__little_inactive');
+    }
+    if (e.target == smallLeft) {
+        if (smallLeft.classList.contains('button__little_inactive')) {
+            doubleButLeft.classList.add('button__arrow_small_inactive');
+            doubleButLeft.classList.add('button__little_inactive');
+        }
+        doubleButRight.classList.remove('button__arrow_small_inactive');
+        doubleButRight.classList.remove('button__little_inactive');
+    }
+
+
+});
+
+
 
 const createPets = (petsList) => {
     for (let i = 0; i < petsList.length; i++) {
@@ -224,12 +247,6 @@ const sort6recursively = (list) => {
 function getItemSlide() {
     console.log(swiper.activeIndex);
 }
-
-
-
-
-
-
 
 
 const closeModalButtons = document.querySelectorAll('[data-close-button]');

@@ -30,6 +30,11 @@ body.lock {
   color: #292929;
   font-weight: normal;
   letter-spacing: 0.11rem;
+  position: relative;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
 }
 .button:hover {
   cursor: pointer;
@@ -55,6 +60,8 @@ body.lock {
 }
 .button__little_inactive {
   border: 2px solid #CDCDCD;
+  pointer-events: none;
+  color: #CDCDCD;
 }
 .button__little_inactive:hover {
   cursor: not-allowed !important;
@@ -87,49 +94,19 @@ body.lock {
   background-position: 50% 50%;
   transform: rotate(180deg);
 }
-.button__arrow_small_left {
-  background-image: url("../../assets/icons/small-arrow.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  transform: rotate(180deg);
+.button__arrow_small {
+  font-size: 2rem;
+  font-weight: 700;
 }
-.button__arrow_small_left_inactive {
-  background-image: url("../../assets/icons/small-arrow_inactive.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
+.button__arrow_small_inactive {
+  color: #CDCDCD;
 }
-.button__arrow_small_left_double {
-  background-image: url("../../assets/icons/small-arrow-double.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  transform: rotate(180deg);
+.button__arrow_small_double {
+  font-size: 2rem;
+  font-weight: 700;
 }
-.button__arrow_small_left_double_inactive {
-  background-image: url("../../assets/icons/small-arrow__inactive-double.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-}
-.button__arrow_small_right {
-  background-image: url("../../assets/icons/small-arrow.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-}
-.button__arrow_small_right_inactive {
-  background-image: url("../../assets/icons/small-arrow_inactive.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  transform: rotate(180deg);
-}
-.button__arrow_small_right_double {
-  background-image: url("../../assets/icons/small-arrow-double.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-}
-.button__arrow_small_right_double_inactive {
-  background-image: url("../../assets/icons/small-arrow__inactive-double.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  transform: rotate(180deg);
+.button__arrow_small_double_inactive {
+  color: #CDCDCD;
 }
 .button__big {
   border: 2px solid transparent;

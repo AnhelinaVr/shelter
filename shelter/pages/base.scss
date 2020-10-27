@@ -125,6 +125,11 @@ body {
     color: $color-dark-3xl;
     font-weight: normal;
     letter-spacing: 0.11rem;
+    position: relative;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
     &:hover {
         cursor: pointer;
         border: 2px solid transparent;
@@ -150,6 +155,8 @@ body {
         }
         &_inactive {
             border: 2px solid $color-dark-s;
+            pointer-events: none;
+            color: $color-dark-s;
             &:hover {
                 cursor: not-allowed !important;
                 border: 2px solid $color-dark-s;
@@ -184,47 +191,17 @@ body {
                 transform: rotate(180deg);
             }
         }
-        &_small_left {
-            background-image: url('../../assets/icons/small-arrow.svg');
-            background-repeat: no-repeat;
-            background-position: 50% 50%;
-            transform: rotate(180deg);
+        &_small {
+            font-size: 2rem;
+            font-weight: 700;
             &_inactive {
-                background-image: url('../../assets/icons/small-arrow_inactive.svg');
-                background-repeat: no-repeat;
-                background-position: 50% 50%;
+                color: $color-dark-s;
             }
             &_double {
-                background-image: url('../../assets/icons/small-arrow-double.svg');
-                background-repeat: no-repeat;
-                background-position: 50% 50%;
-                transform: rotate(180deg);
+                font-size: 2rem;
+                font-weight: 700;
                 &_inactive {
-                    background-image: url('../../assets/icons/small-arrow__inactive-double.svg');
-                    background-repeat: no-repeat;
-                    background-position: 50% 50%;
-                }
-            }
-        }
-        &_small_right {
-            background-image: url('../../assets/icons/small-arrow.svg');
-            background-repeat: no-repeat;
-            background-position: 50% 50%;
-            &_inactive {
-                background-image: url('../../assets/icons/small-arrow_inactive.svg');
-                background-repeat: no-repeat;
-                background-position: 50% 50%;
-                transform: rotate(180deg);
-            }
-            &_double {
-                background-image: url('../../assets/icons/small-arrow-double.svg');
-                background-repeat: no-repeat;
-                background-position: 50% 50%;
-                &_inactive {
-                    background-image: url('../../assets/icons/small-arrow__inactive-double.svg');
-                    background-repeat: no-repeat;
-                    background-position: 50% 50%;
-                    transform: rotate(180deg);
+                    color: $color-dark-s;
                 }
             }
         }
