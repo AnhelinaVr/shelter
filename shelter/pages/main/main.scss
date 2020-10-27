@@ -172,7 +172,7 @@ header {
 
 .help {
     .wrapper {
-        padding: 79px 0 100px;
+        padding: 79px 0 93px;
         text-align: center;
     }
     &__title {
@@ -350,6 +350,9 @@ header {
         }
     }
     .help {
+        .wrapper {
+            padding: 79px 0 98px;
+        }
         &__container {
             margin: 59px 39px 0 39px;
             column-gap: 60px;

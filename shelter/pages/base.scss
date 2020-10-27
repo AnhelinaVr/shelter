@@ -259,14 +259,14 @@ body {
         .modal__img {
             width: 500px;
             @media screen and (max-width: 767px) {
-                width: 350px;
-            }
-            @media screen and (max-width: 600px) {
                 display: none;
             }
         }
         .pets__card_modal {
             width: 400px;
+            @media screen and (max-width: 767px) {
+                margin: 0 auto;
+            }
         }
         .pet__name {
             @include h3;
@@ -313,9 +313,15 @@ body {
     bottom: 0;
     background: rgba(41, 41, 41, 0.6);
     pointer-events: none;
+    &:hover {
+        cursor: pointer;
+    }
     &.active {
         opacity: 1;
-        z-index: 2;
+        z-index: 3;
         pointer-events: all;
+        @media screen and (max-width: 767px) {
+            z-index: 2 !important;
+        }
     }
 }

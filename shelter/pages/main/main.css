@@ -164,16 +164,16 @@ body.lock {
 }
 @media screen and (max-width: 767px) {
   .modal .modal-body .modal__img {
-    width: 350px;
-  }
-}
-@media screen and (max-width: 600px) {
-  .modal .modal-body .modal__img {
     display: none;
   }
 }
 .modal .modal-body .pets__card_modal {
   width: 400px;
+}
+@media screen and (max-width: 767px) {
+  .modal .modal-body .pets__card_modal {
+    margin: 0 auto;
+  }
 }
 .modal .modal-body .pet__name {
   font-size: 3.5rem;
@@ -237,10 +237,18 @@ body.lock {
   background: rgba(41, 41, 41, 0.6);
   pointer-events: none;
 }
+#overlay:hover {
+  cursor: pointer;
+}
 #overlay.active {
   opacity: 1;
-  z-index: 2;
+  z-index: 3;
   pointer-events: all;
+}
+@media screen and (max-width: 767px) {
+  #overlay.active {
+    z-index: 2 !important;
+  }
 }
 
 header {
@@ -434,7 +442,7 @@ header .list__link_active {
 }
 
 .help .wrapper {
-  padding: 79px 0 100px;
+  padding: 79px 0 93px;
   text-align: center;
 }
 .help__title {
@@ -648,6 +656,9 @@ header .list__link_active {
     padding: 80px 30px 101px;
   }
 
+  .help .wrapper {
+    padding: 79px 0 98px;
+  }
   .help__container {
     margin: 59px 39px 0 39px;
     column-gap: 60px;

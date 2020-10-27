@@ -164,16 +164,16 @@ body.lock {
 }
 @media screen and (max-width: 767px) {
   .modal .modal-body .modal__img {
-    width: 350px;
-  }
-}
-@media screen and (max-width: 600px) {
-  .modal .modal-body .modal__img {
     display: none;
   }
 }
 .modal .modal-body .pets__card_modal {
   width: 400px;
+}
+@media screen and (max-width: 767px) {
+  .modal .modal-body .pets__card_modal {
+    margin: 0 auto;
+  }
 }
 .modal .modal-body .pet__name {
   font-size: 3.5rem;
@@ -237,10 +237,18 @@ body.lock {
   background: rgba(41, 41, 41, 0.6);
   pointer-events: none;
 }
+#overlay:hover {
+  cursor: pointer;
+}
 #overlay.active {
   opacity: 1;
-  z-index: 2;
+  z-index: 3;
   pointer-events: all;
+}
+@media screen and (max-width: 767px) {
+  #overlay.active {
+    z-index: 2 !important;
+  }
 }
 
 header {
@@ -612,7 +620,7 @@ header .menu__btn > span::after {
   }
 
   .pets .wrapper {
-    padding: 160px 0 100px;
+    padding: 160px 0 30px;
   }
   .pets__title {
     font-size: 2.5rem;
