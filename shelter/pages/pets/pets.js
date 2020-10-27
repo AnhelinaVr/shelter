@@ -127,10 +127,30 @@ document.querySelector('.pets__slider__buttons').addEventListener('click', (e) =
         }
     }
     pagination.textContent = counter;
+    let maxCount;
+    switch (swiper.currentBreakpoint) {
+        case '1280':
+            {
+                maxCount = 6;
+                break;
+            }
+        case '767':
+            {
+                maxCount = 8;
+                break;
+            }
+        case '320':
+            {
+                maxCount = 16;
+                break;
+            }
+    }
+
     if (e.target == doubleButRight) {
         swiper.activeIndex = 20;
-
         swiper.update();
+        counter = maxCount;
+        pagination.textContent = counter;
         doubleButRight.classList.add('button__arrow_small_inactive');
         doubleButRight.classList.add('button__little_inactive');
         doubleButLeft.classList.remove('button__arrow_small_inactive');
@@ -139,6 +159,8 @@ document.querySelector('.pets__slider__buttons').addEventListener('click', (e) =
     if (e.target == doubleButLeft) {
         swiper.slideTo(0);
         swiper.update();
+        counter = 1;
+        pagination.textContent = counter;
         doubleButLeft.classList.add('button__arrow_small_inactive');
         doubleButLeft.classList.add('button__little_inactive');
         doubleButRight.classList.remove('button__arrow_small_inactive');
